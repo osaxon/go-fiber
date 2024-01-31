@@ -20,5 +20,9 @@ func main() {
 
 	router.SetupRoutes(app)
 
+	app.Get("/test/:name", func(c *fiber.Ctx) error {
+		return c.JSON(fiber.Map{"name": c.Params("name")})
+	})
+
 	log.Fatal(app.Listen(":3000"))
 }

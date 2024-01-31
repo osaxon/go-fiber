@@ -10,4 +10,7 @@ func SetupRoutes(app *fiber.App) {
 	api.Get("/", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{"message": "Hello, World!"})
 	})
+	api.Get("/stack", func(c *fiber.Ctx) error {
+		return c.JSON(c.App().GetRoutes())
+	})
 }
