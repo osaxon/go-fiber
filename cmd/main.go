@@ -13,7 +13,7 @@ func main() {
 		CaseSensitive: true,
 		StrictRouting: true,
 		ServerHeader:  "Fiber",
-		AppName:       "App Name",
+		AppName:       "GoFiber",
 	})
 	// app.Use(cors.New())
 
