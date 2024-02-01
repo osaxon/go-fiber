@@ -1,5 +1,4 @@
-# Use a specific Golang image as the base
-FROM golang:1.21
+FROM golang:1.21@sha256:cffaba795c36f07e372c7191b35ceaae114d74c31c3763d442982e3a4df3b39e
 
 # Set environment variables
 ENV GO111MODULE=on \
