@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"fiber.osaxon/database"
 	"fiber.osaxon/router"
 	"github.com/gofiber/fiber/v2"
 	// "github.com/gofiber/fiber/v2/middleware/cors"
@@ -17,7 +18,7 @@ func main() {
 		AppName:       "GoFiber",
 	})
 	// app.Use(cors.New())
-
+	database.Connect()
 	router.SetupRoutes(app)
 
 	app.Get("/test/:name", func(c *fiber.Ctx) error {
