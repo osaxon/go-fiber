@@ -23,7 +23,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go application
-RUN go build -o app .
+RUN go build cmd/main.go -o app .
 
 # Create a minimal runtime image
 FROM alpine:3.14
