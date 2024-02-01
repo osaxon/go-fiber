@@ -23,7 +23,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go application
-RUN --mount=type=cache,target=/root/.cache/go-build go build -o out cmd/main.go
+RUN go build -o out cmd/main.go
 
 # Create a minimal runtime image
 FROM alpine:3.14
