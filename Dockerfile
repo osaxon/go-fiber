@@ -1,5 +1,5 @@
 # Use a specific Golang image as the base
-FROM golang:1.17.5-alpine3.14 AS builder
+FROM golang:1.21.3-alpine3.14 AS builder
 
 # Set environment variables
 ENV GO111MODULE=on \
